@@ -318,7 +318,6 @@ function continueExecution() {
 
 function waitTime() {
     var waitTime = Math.random() * 1500 + 1000;
-    waitTime = 0;
     console.log(waitTime);
     return waitTime;
 }
