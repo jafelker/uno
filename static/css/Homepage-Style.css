@@ -1,0 +1,101 @@
+#myCanvas {
+	height: 300px;
+	width: 300px;
+	border: 2px solid black;
+}
+
+#homePageDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("/static/images/Home-page-logo.png");
+    background-repeat:no-repeat;
+    background-position: 50% 10%; 
+    background-size: 50%;
+}
+
+#Body{
+	
+  background-color: -webkit-linear-gradient(left,red, gold, red); /* For Safari 5.1 to 6.0 */
+  background-color: -o-linear-gradient(right,red, gold, red); /* For Opera 11.1 to 12.0 */
+  background-color: -moz-linear-gradient(right, red, gold, red); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right,red, gold, red); /* Standard syntax */
+}
+#MainDiv {
+	left: 50;
+	width: 400px;
+    padding: 25px;
+    border: 10px solid black;
+    margin: 0 auto;
+}
+#ButtonDiv {
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    text-align: center;
+}
+
+#startButt {
+
+}
+#HTPButt {
+
+}
+#MainImage {
+	text-align: center;
+}
+#MusicBoxON{
+	height: 50px;
+	width: 50px;
+    position: absolute;
+}
+#MusicBoxDiv{
+    position: absolute;
+}
+#MusicBoxOFF{
+    position: absolute;
+	height: 50px;
+	width: 50px;
+	visibility: hidden;
+}
+
+.large
+{
+color:gold;
+padding:10px 15px 10px 15px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+font-family: 'Goudy Old Style', Garamond, 'Big Caslon', 'Times New Roman', serif;
+} 
+
+
+.btn-custom {
+  background-color: #c21f1f;
+  border-color: #c21f1f;
+  color: white;
+  font-weight:bold;
+}
+.btn-custom:hover {
+	background-color: white;
+	border-color: white;
+	color: #c21f1f;
+	box-shadow: 0px 0px 10px 4px red;
+}
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active 
+

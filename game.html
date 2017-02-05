@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Uno Online</title>
+
+    <!-- metas -->
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Uno game based web app">
+    <meta name="author"      content="Josh, Cory, Alden, Dan">
+    <meta name="og:image" content="/static/images/cards/cardback.png">
+    <!-- styles -->
+    <link rel="icon" href="/static/unoIcon.ico" type="image/x-icon" />
+    <link rel="stylesheet"   href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet"   href="/static/css/tags.css" />
+    <link rel="stylesheet"   href="/static/css/classes.css" />
+    <link rel="stylesheet"   href="/static/css/ids.css" />
+    <link rel="stylesheet"   href="/static/css/Homepage-Style.css">
+    <link rel="stylesheet"   href="/static/css/howtoplay.css">
+    <link rel="stylesheet"   href="/static/css/settings.css">
+    <link rel="stylesheet"   href="/static/css/game.css">
+    <link rel="stylesheet"   href="/static/css/colorselect.css">
+    <link rel="stylesheet"   href="/static/css/winround.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/qwest.min.js"></script>
+    <script type="text/javascript" src="/static/js/howtoplay.js"></script>
+
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" id="nav">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Uno Online!</a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li>
+                <a href="/">
+                  <span class="glyphicon glyphicon-home"></span> Home
+                </a>
+            </li>
+            <li>
+                <a href="" data-toggle="modal" data-target="#howToPlayModal">How To Play</a>
+            </li>
+            <li>
+                <a href="/game.html">New Game</a>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container -->
+    </nav>
+    <div class="container" id="container">
+
+      <!--{% block content %}-->
+
+  <div id="content">
+    <div id="game-board">
+
+    <div id="piles">
+      <div class="boxed" id="discardPile">
+      </div>
+
+      <div class="boxed" id="drawPile">
+        <img id="drawPileCard" src="/static/images/cards/cardback.png"/>
+      </div>
+    </div>
+
+      <div class="players" id="p1">
+        Cory
+      </div>
+
+      <div class="hand" id="p1cards">
+      </div>  
+
+      <div class="players" id="p2">
+        Dan
+      </div>
+
+      <div class="hand" id="p2cards"> 
+      </div>  
+
+      <div id ="clrCircle" style="padding-right: 5px">
+          <span style="color: white; font-weight:bold; position: relative; left: 0%; top: 0%; font-size: 2.5vh;"> Current Color </span>
+          <svg style="position: relative; bottom: 0%;" height= "75%" width="75%">
+              <circle id="colorIndicator" cx="50%" cy="40%" r="30%" stroke="black" stroke-width="1" fill="none"/>
+          </svg>
+      </div>
+    
+
+      <div id = "directionID">
+          <span style="color: white; font-weight:bold; position: absolute; left: 30%; top: 0%; font-size: 2.5vh;"> Direction </span>
+          <img id="arrowIndicator" style ="height: 65%; width: 65%; position: absolute; top: 30%; left: 20%"src="/static/images/arrowleft.png">
+      </div>
+      <div class="players" id="p3">
+        Josh
+      </div>
+
+      <div class="hand" id="p3cards" >
+      </div> 
+
+      <div class="players" id="p4">
+        Alden
+      </div>
+
+      <div class="hand" id="p4cards">
+      </div>  
+
+
+    </div>
+    <div id="score-board">
+
+    <table class="table table-bordered" id="score-board-table">
+      <tbody>
+        <tr>
+          <td class="bold" colspan="2">Score Board</td>
+        </tr>
+        <tr>
+          <td class="bold" >Player</td>
+          <td class="bold" >Score</td>
+        </tr>
+        <tr>
+          <td id="p1scoreName">player</td>
+          <td id="p1score">0</td>
+        </tr>
+        <tr>
+          <td id="p2scoreName">player</td>
+          <td id="p2score">0</td>
+        </tr>
+        <tr>
+          <td id="p3scoreName">player</td>
+          <td id="p3score">0</td>
+        </tr>
+        <tr>
+          <td id="p4scoreName">player</td>
+          <td id="p4score">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+    </div>
+    <div id="gameplay-log">
+      <div id="log-title" class="bold" >
+        Log
+        <button id="minus" >
+          &minus;
+        </button>
+        <button id="plus">
+          &plus;
+        </button>
+      </div>
+      <ul id="log-list" class="list-unstyled">
+      </ul>
+    </div>
+  </div>
+
+      <!--{% endblock %}-->
+    <footer id="footer">
+        <p class="text-muted">Josh, Cory, Alden, Dan 2015</p>
+    </footer>
+    </div>
+
+
+    <!-- How To Play Modal -->
+    <div class="modal fade" id="howToPlayModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">How To Play</h4>
+          </div>
+          <div class="modal-body">
+            <!--{% include 'howtoplay.html' %}-->
+            	<div class="container" id="mainContainer" style="margin: 0 auto;">
+		<h1>How To Play</h1>
+
+		<div id="setup">
+			<p class="htp-label" id="setup-label">Set Up</p>
+
+			<div class="rules-content" id="setup-content">
+				<br>
+				<p>Our Uno Online! game is played with 4 players, including you and 3 other AI players.  At the beginning of each game, each player is dealt 7 cards.  The rest of the cards go face down in the Draw Pile that is placed in the center of the table.  Next to the Draw Pile should be some space for the Discard Pile.  To begin the game, the top card from the Draw Pile is placed face up in the Discard Pile.</p>
+			</div>
+
+			<img class="dropdown-arrow" id="setup-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+
+			<hr>
+		</div>
+
+		<div id="mechanics">
+			<p class="htp-label" id="mechanics-label">Mechanics</p>
+
+			<div class="rules-content" id="mechanics-content">
+				<br>
+				<p>The game starts with the player to the left of the dealer, who will be chosen randomly at the start of the game.  Players take turns around the table in a clockwise direction.  Players view their cards and then tries to match the card that is on top of the Discard Pile.  Cards must be matched by either color and/or number.  For example, if a blue 5 is on top of the Discard Pile, it can be matchd with either a 5 of any color or a blue card with any number.  There are some cards where special rules apply, which will be covered later.</p>
+
+				<p>If the player has no matches or they choose not to play any of their cards even though they might have a match, they must draw one card from the Draw Pile.  If the player draws a card that can be played, they are given the opportunity to play it.  The game then moves on to the next person in turn.</p>
+			</div>
+
+			<img class="dropdown-arrow" id="mechanics-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+
+			<hr>
+		</div>
+
+		<div id="objective">
+			<p class="htp-label" id="objective-label">Objective</p>
+
+			<div class="rules-content" id="objective-content">
+				<br>
+				<p>The objective in Uno is to be the first player to have zero cards in your hand, by discarding all of your cards.  Once one player has no cards remaining, the round is over and scoring is carried out.</p>
+			</div>
+
+			<img class="dropdown-arrow" id="objective-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+
+			<hr>
+		</div>
+
+		<div id="types">
+			<p class="htp-label" id="cards-label">Types of Cards</p>
+
+			<div class="rules-content" id="cards-content">
+				<br>
+				<p>Besides the standard number cards, there are also some special cards that have unique effects on the game, called Action or Symbol cards.  A list of the Action cards and their descriptions can be seen below.</p>
+
+				<div id="cardTypes">
+					<p><b><ins>Reverse</ins></b> - Reverses the direction of gameplay from clockwise to counterclockwise or vice versa.</p>
+					<p><b><ins>Skip</ins></b> - When a player places this card, the next player has to skip their turn.</p>
+					<p><b><ins>Draw Two</ins></b> - When a person places this card, the next player is forced to pick up two cards and forfeit their turn.</p>
+					<p><b><ins>Wild</ins></b> - This card represents all four colors, meaning that it can be played on any card.  The player who plays the wild card gets to choose what color it represents for the next player.</p>
+					<p><b><ins>Wild Draw Four</ins></b> - This card has the same functionality as the wild card, except that it also forces the next player to draw four cards.</p>
+				</div>
+			</div>
+
+			<img class="dropdown-arrow" id="cards-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+
+			<hr>
+		</div>
+
+		<div id="scoring">
+			<p class="htp-label" id="scoring-label">Scoring</p>
+
+			<div class="rules-content" id="scoring-content">
+			<br>
+				<p>Our Uno Online! Game has two different scoring systems, each with their own options.  The two scoring systems are described below.</p>
+
+				<p><b><ins>Point System</ins></b> - Using the point system, the player with zero cards at the end of the round is awarded points.  The number of points they receive is based on the cards in their opponents' hands.  All number cards are worth the same value as the number on the card.  The "Draw Two", "Reverse", and "Skip" cards are worth 20 pooints and the "Wild" and "Wild Draw Four" cards are worth 50 points.  This system can either go to 500, 1000, 2000, or a custom amount of points.</p>
+				<p><b><ins>Tally System</ins></b> - The tally system does not keep track of points at all.  Instead, it keeps track of the number of rounds/games that each player has won.  This mode can be played up to 1, 5, 10, or a custom amount of wins.</p>
+			</div>
+
+			<img class="dropdown-arrow" id="scoring-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+
+			<hr>
+		</div>
+
+	</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal fade" id="settingsModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+<!--             <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+            <h4 class="modal-title">Settings</h4>
+          </div>
+          <div class="modal-body">
+            <!--{% include 'settings.html' %}-->
+            <input class="outerRadio" id="pointSystemRadio" type="radio" name="pointSystem" value=true/>Point System<br>
+
+<div id="pointSystemInner" class="innerRadioGroup">
+	<input class="innerRadio" id="pointSystemDefault" type="radio" name="pointSystemVal" value=500/>500<br>
+	<input class="innerRadio" type="radio" name="pointSystemVal" value=1000>1000<br>
+	<input class="innerRadio" type="radio" name="pointSystemVal" value=2000>2000<br>
+	<input class="innerRadio" id="pointSystemCustom" type="radio" name="pointSystemVal" value="custom"/>Custom
+	<input type="text" id="pointSystemCustomInput" name="pointSystemCustom"/>
+	<p class="errorText">
+		Custom input must be a number that is greater than zero.
+	</p>
+</div>
+
+<input class="outerRadio" id="tallySystemRadio" type="radio" name="pointSystem" value=false/>Tally System<br>
+
+<div id="tallySystemInner" class="innerRadioGroup">
+	<input class="innerRadio" id="tallySystemDefault" type="radio" name="tallySystemVal" value=1/>1<br>
+	<input class="innerRadio" type="radio" name="tallySystemVal" value=5>5<br>
+	<input class="innerRadio" type="radio" name="tallySystemVal" value=10>10<br>
+	<input class="innerRadio" id="tallySystemCustom" type="radio" name="tallySystemVal" value="custom"/>Custom
+	<input type="text" id="tallySystemCustomInput" name="tallySystemCustom"/>
+	<p class="errorText">
+		Custom input must be a number that is greater than zero.
+	</p>
+	<br>
+</div>
+
+<label for="playerName">Name:</label>
+<input type="text" id="playerName" name="playerNameInput"/>
+<br>
+
+<button class="btn btn-default" id="submitButton">Start the Game!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="colorSelectionModal" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title">Choose a color:</h4>
+            </div>
+            <div class="modal-body center-block">
+              <div class="row">               
+                  <img src="/static/images/selectionsquare.png" usemap="#selection" id="centerimg">
+                  <map name="selection">    
+                    <area id="blueSelect" shape="rect" coords="100,0,300,100">
+                    <area id="yellowSelect" shape="rect" coords="0,100,99,200">
+                    <area id="greenSelect" shape="rect" coords="100,100,200,200">
+                    <area id="redSelect" shape="rect" coords="0,0,100,100">
+                  </map>
+              </div>    
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="roundEndModal" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h4 class="modal-title">Round Ended</h4>
+            </div>
+            <div class="modal-body text-center">
+              <p id="winroundtext"></p>
+              <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                  <button class="btn btn-block" id="roundEndButton">Start New Round</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+  <div class="modal fade" id="gameEndModal" role="dialog">
+      <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title">Game Ended</h4>
+            </div>
+            <div class="modal-body text-center">
+              <p id="wingametext"></p>
+              <div class = "row">
+                <div class = "col-xs-6">
+                  <button class="btn btn-block" id="newGameModalButton">New Game</button>
+                </div>  
+                <div class = "col-xs-6">
+                  <button class="btn btn-block" id="mainMenuModalButton">Exit to Main Menu</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+   </div>
+
+
+<script type="text/javascript" src="/static/js/settings.js"></script>
+<script type="text/javascript" src="/static/js/game.js"></script>
+
+
+
+
+  </body>
+</html>

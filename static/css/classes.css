@@ -1,0 +1,53 @@
+.container{
+    padding: 0;
+}
+
+.btn:focus, .btn:active{
+    outline: none;
+}
+
+.players{
+    position: absolute;
+    color: white;
+}
+
+
+
+.hand {
+    position: absolute;
+    /*width: 60%;*/
+    /*height: 15%;*/
+}
+
+.hand img{
+    height: 100%;
+}
+.cardai{
+    position: absolute;
+}
+
+.card{
+    position: absolute;
+    height: 15%;
+    width: auto;
+}
+
+/*.cardai1{
+    position: absolute;
+}
+
+.cardai2{
+    position: absolute;
+}
+
+.cardai3{
+    position: absolute;
+}*/
+
+.bold{
+    font-weight: bold;
+}
+.table{
+    margin-bottom: 0px;
+}
+

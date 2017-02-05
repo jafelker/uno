@@ -1,0 +1,38 @@
+h1 {
+	text-align: center;
+}
+
+#mainContainer {
+	width: 80%;
+}
+
+.rules-content {
+	word-wrap: break-word;
+	margin-right: 60px;
+	margin-left: 10px;
+}
+
+.dropdown-arrow {
+	float: right;
+}
+
+hr {
+	clear: both;
+}
+
+.htp-label {
+	float: left;
+}
+
+.modal-open .modal {
+	overflow-x: auto;
+	width: auto;
+}
+
+.modal-dialog {
+	width: 1000px;
+}
+
+#cardTypes {
+	margin-left: 30px;
+}

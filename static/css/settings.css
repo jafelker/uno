@@ -1,0 +1,31 @@
+br {
+	clear: both;
+}
+
+.outerRadio {
+	float: left;
+	margin-right: 15px !important;
+	margin-bottom: 20px !important;
+}
+
+.innerRadio {
+	float: left;
+	margin-right: 15px !important;
+	margin-bottom: 10px !important;
+}
+
+.innerRadioGroup {
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+#playerName {
+	margin-bottom: 25px;
+	margin-top: 15px;
+}
+
+.errorText {
+	display: inline;
+	color: red;
+	font-weight: bold;
+}

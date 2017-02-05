@@ -1,0 +1,20 @@
+html, body{
+    margin: 0;
+    padding-top: 30px;
+    height: 100%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+}
+
+a:focus, a:active{
+    outline: none !important;
+}
+
+img{
+	border-radius: 10px;
+}

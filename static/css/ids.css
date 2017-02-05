@@ -1,0 +1,175 @@
+#container{
+    position: relative;
+    margin: 0 auto;
+    height: auto !important;
+    min-height: 100%;
+    background: green;
+}
+
+#content{
+    padding-bottom: 30px;
+}
+
+
+
+#game-board{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    /*border: 1px solid white;*/
+    width: 75%;
+    background-image: url("/static/images/Home-page-logo.png");
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+    padding: 10px;
+}
+
+#score-board{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25%;
+    border-top: 0px solid;
+    border-right: 0px solid;
+    /*border-color: white;*/
+    text-align: center;
+    color: black;
+    background: white;
+    overflow: auto;
+}
+
+#gameplay-log{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 25%;
+    border: 1px solid #ddd;
+    text-align: center;
+    background: white;
+    color: black;
+}
+#log-title{
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    height: 10%;
+}
+
+#log-list{
+    text-align: left;
+    overflow: auto;
+    height: 90%;
+    width: 100%;
+}
+
+#score-board-table{
+    background: white;
+}
+
+#nav{
+    margin-bottom: 0;
+}
+
+#piles {
+    position: absolute;
+    left: 0%;
+    top: 42.5%;
+    height: 15%;
+    width: 100%;
+}
+
+#discardPile {
+    position: absolute;
+    /*border: 4px solid black;*/
+    height: 100%;
+    width: 9.7%;
+    left: 40%;
+}
+
+#drawPile {
+    position: absolute;
+    /*border: 4px solid black;*/
+    height: 100%;
+    width: 9.7%;
+    right: 40%;
+}
+
+#drawPileCard {
+    position: absolute;
+    height: 100%;
+}
+
+#discardPileCard {
+    position: absolute;
+    height: 100%;
+}
+#p1{
+    top: 0;
+}
+
+#p2{
+    transform: rotateZ(270deg);
+    right: -.5%;
+}
+#p3{
+    bottom: 0;
+}
+
+#p4{
+    transform: rotateZ(90deg);
+    left: -1%;
+}
+#p1cards{
+    left: 20%;
+    top: 5%;
+    width: 60%;
+    height: 15%;
+}
+
+#p2cards{
+    transform: rotateZ(270deg);
+    top: 42.5%;
+    right: -12.5%;
+    height: 15%;
+}
+
+#p3cards{
+    left: 20%;
+    bottom: 5%;
+    width: 60%;
+    height: 15%;
+}
+
+#p4cards{
+    transform: rotateZ(90deg);
+    top: 42.5%;
+    left: -12.5%;
+    height: 15%;
+}
+
+#minus{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#plus{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+#clrCircle {
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+    height: 15%;
+    width: 15%
+}
+#directionID {
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+    height: 15%;
+    width: 15%
+}
