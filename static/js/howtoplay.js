@@ -7,11 +7,11 @@ $(document).ready(function() {
         var rules = temp.find(".rules-content");
         if($(rules).is(':visible')) {
             $(rules).slideUp("fast", "linear");
-            $(this).attr('src', '../static/images/dropdown_arrow_closed.jpg');
+            $(this).attr('src', 'static/images/dropdown_arrow_closed.jpg');
         }
         else {
             $(rules).slideDown("fast", "linear");
-            $(this).attr('src', '../static/images/dropdown_arrow_open.jpg');
+            $(this).attr('src', 'static/images/dropdown_arrow_open.jpg');
         }
     });
     $('#howToPlayModal').on('show.bs.modal', function () {

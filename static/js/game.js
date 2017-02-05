@@ -97,11 +97,11 @@ $(document).ready(function(){
     });
 
     $("#newGameModalButton").click(function() {
-        location.href = location.protocol + "//" + location.host + "/game.html";
+        location.href = "game.html";
     });
 
     $("#mainMenuModalButton").click(function() {
-        location.href = location.protocol + "//" + location.host;
+        location.href = "..";
     });
 
     $("#drawPileCard").click(function() {
@@ -305,10 +305,10 @@ function changeColorIndicator(color) {
 
 function changeArrowIndicator(direction) {
     if(direction == 1) {
-        $("#arrowIndicator").attr("src", "/static/images/arrowleft.png");
+        $("#arrowIndicator").attr("src", "static/images/arrowleft.png");
     }
     else {
-        $("#arrowIndicator").attr("src", "/static/images/arrowright.png");
+        $("#arrowIndicator").attr("src", "static/images/arrowright.png");
     }
 }
 
@@ -318,6 +318,7 @@ function continueExecution() {
 
 function waitTime() {
     var waitTime = Math.random() * 1500 + 1000;
+    waitTime = 0;
     console.log(waitTime);
     return waitTime;
 }
@@ -366,7 +367,7 @@ function player(name, divId, textDivId, hand, score, isAI, id, scoreboard) {
 
     this.addCardToHand = function(card) {
         if(!this.isAI) {
-            $(this.divId).append("<img class='card' id='" + card.cardId + "' src='/static/images/cards/" + card.imageName() + "' />");
+            $(this.divId).append("<img class='card' id='" + card.cardId + "' src='static/images/cards/" + card.imageName() + "' />");
             $(initDrag);
             // $("#" + card.cardId).click(function() {
                 // currentGame.humanPlay(Number(this.id));
@@ -380,14 +381,14 @@ function player(name, divId, textDivId, hand, score, isAI, id, scoreboard) {
             });
         }
         else {
-            $(this.divId).append("<img class='card' id='" + card.cardId + "' src='/static/images/cards/cardback.png' />");
+            $(this.divId).append("<img class='card' id='" + card.cardId + "' src='static/images/cards/cardback.png' />");
         }
         redrawHand(this.divId);
     }
 
     this.removeCardFromHand = function(card) {
         $(this.divId + " > #" + card.cardId).remove();
-        $("#discardPile > img").attr("src", "/static/images/cards/" + card.imageName());
+        $("#discardPile > img").attr("src", "static/images/cards/" + card.imageName());
         redrawHand(this.divId);
     }
 
@@ -583,7 +584,7 @@ function game(players) {
         }
         var card = this.drawPile.shift();
         this.discardPile.unshift(card);
-        $("#discardPile").append("<img id='discardPileCard' src='/static/images/cards/" + card.imageName() + "' />");
+        $("#discardPile").append("<img id='discardPileCard' src='static/images/cards/" + card.imageName() + "' />");
         console.log("A new round has started.");
         addLogString("A new round has started.");
         console.log("The first card added to the discard pile is: ");

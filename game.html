@@ -8,25 +8,25 @@
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Uno game based web app">
     <meta name="author"      content="Josh, Cory, Alden, Dan">
-    <meta name="og:image" content="/static/images/cards/cardback.png">
+    <meta name="og:image" content="static/images/cards/cardback.png">
     <!-- styles -->
-    <link rel="icon" href="/static/unoIcon.ico" type="image/x-icon" />
+    <link rel="icon" href="static/unoIcon.ico" type="image/x-icon" />
     <link rel="stylesheet"   href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet"   href="/static/css/tags.css" />
-    <link rel="stylesheet"   href="/static/css/classes.css" />
-    <link rel="stylesheet"   href="/static/css/ids.css" />
-    <link rel="stylesheet"   href="/static/css/Homepage-Style.css">
-    <link rel="stylesheet"   href="/static/css/howtoplay.css">
-    <link rel="stylesheet"   href="/static/css/settings.css">
-    <link rel="stylesheet"   href="/static/css/game.css">
-    <link rel="stylesheet"   href="/static/css/colorselect.css">
-    <link rel="stylesheet"   href="/static/css/winround.css">
+    <link rel="stylesheet"   href="static/css/tags.css" />
+    <link rel="stylesheet"   href="static/css/classes.css" />
+    <link rel="stylesheet"   href="static/css/ids.css" />
+    <link rel="stylesheet"   href="static/css/Homepage-Style.css">
+    <link rel="stylesheet"   href="static/css/howtoplay.css">
+    <link rel="stylesheet"   href="static/css/settings.css">
+    <link rel="stylesheet"   href="static/css/game.css">
+    <link rel="stylesheet"   href="static/css/colorselect.css">
+    <link rel="stylesheet"   href="static/css/winround.css">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/static/js/qwest.min.js"></script>
-    <script type="text/javascript" src="/static/js/howtoplay.js"></script>
+    <script type="text/javascript" src="static/js/qwest.min.js"></script>
+    <script type="text/javascript" src="static/js/howtoplay.js"></script>
 
 
   </head>
@@ -56,7 +56,7 @@
                 <a href="" data-toggle="modal" data-target="#howToPlayModal">How To Play</a>
             </li>
             <li>
-                <a href="/game.html">New Game</a>
+                <a href="game.html">New Game</a>
             </li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -74,7 +74,7 @@
       </div>
 
       <div class="boxed" id="drawPile">
-        <img id="drawPileCard" src="/static/images/cards/cardback.png"/>
+        <img id="drawPileCard" src="static/images/cards/cardback.png"/>
       </div>
     </div>
 
@@ -102,7 +102,7 @@
 
       <div id = "directionID">
           <span style="color: white; font-weight:bold; position: absolute; left: 30%; top: 0%; font-size: 2.5vh;"> Direction </span>
-          <img id="arrowIndicator" style ="height: 65%; width: 65%; position: absolute; top: 30%; left: 20%"src="/static/images/arrowleft.png">
+          <img id="arrowIndicator" style ="height: 65%; width: 65%; position: absolute; top: 30%; left: 20%"src="static/images/arrowleft.png">
       </div>
       <div class="players" id="p3">
         Josh
@@ -196,7 +196,7 @@
 				<p>Our Uno Online! game is played with 4 players, including you and 3 other AI players.  At the beginning of each game, each player is dealt 7 cards.  The rest of the cards go face down in the Draw Pile that is placed in the center of the table.  Next to the Draw Pile should be some space for the Discard Pile.  To begin the game, the top card from the Draw Pile is placed face up in the Discard Pile.</p>
 			</div>
 
-			<img class="dropdown-arrow" id="setup-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+			<img class="dropdown-arrow" id="setup-dropdown" src="static/images/dropdown_arrow_closed.jpg">
 
 			<hr>
 		</div>
@@ -211,7 +211,7 @@
 				<p>If the player has no matches or they choose not to play any of their cards even though they might have a match, they must draw one card from the Draw Pile.  If the player draws a card that can be played, they are given the opportunity to play it.  The game then moves on to the next person in turn.</p>
 			</div>
 
-			<img class="dropdown-arrow" id="mechanics-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+			<img class="dropdown-arrow" id="mechanics-dropdown" src="static/images/dropdown_arrow_closed.jpg">
 
 			<hr>
 		</div>
@@ -224,7 +224,7 @@
 				<p>The objective in Uno is to be the first player to have zero cards in your hand, by discarding all of your cards.  Once one player has no cards remaining, the round is over and scoring is carried out.</p>
 			</div>
 
-			<img class="dropdown-arrow" id="objective-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+			<img class="dropdown-arrow" id="objective-dropdown" src="static/images/dropdown_arrow_closed.jpg">
 
 			<hr>
 		</div>
@@ -245,7 +245,7 @@
 				</div>
 			</div>
 
-			<img class="dropdown-arrow" id="cards-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+			<img class="dropdown-arrow" id="cards-dropdown" src="static/images/dropdown_arrow_closed.jpg">
 
 			<hr>
 		</div>
@@ -261,7 +261,7 @@
 				<p><b><ins>Tally System</ins></b> - The tally system does not keep track of points at all.  Instead, it keeps track of the number of rounds/games that each player has won.  This mode can be played up to 1, 5, 10, or a custom amount of wins.</p>
 			</div>
 
-			<img class="dropdown-arrow" id="scoring-dropdown" src="../static/images/dropdown_arrow_closed.jpg">
+			<img class="dropdown-arrow" id="scoring-dropdown" src="static/images/dropdown_arrow_closed.jpg">
 
 			<hr>
 		</div>
@@ -327,7 +327,7 @@
             </div>
             <div class="modal-body center-block">
               <div class="row">               
-                  <img src="/static/images/selectionsquare.png" usemap="#selection" id="centerimg">
+                  <img src="static/images/selectionsquare.png" usemap="#selection" id="centerimg">
                   <map name="selection">    
                     <area id="blueSelect" shape="rect" coords="100,0,300,100">
                     <area id="yellowSelect" shape="rect" coords="0,100,99,200">
@@ -382,8 +382,8 @@
    </div>
 
 
-<script type="text/javascript" src="/static/js/settings.js"></script>
-<script type="text/javascript" src="/static/js/game.js"></script>
+<script type="text/javascript" src="static/js/settings.js"></script>
+<script type="text/javascript" src="static/js/game.js"></script>
 
 
 

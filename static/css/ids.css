@@ -19,7 +19,7 @@
     height: 100%;
     /*border: 1px solid white;*/
     width: 75%;
-    background-image: url("/static/images/Home-page-logo.png");
+    background-image: url("../images/Home-page-logo.png");
     background-repeat:no-repeat;
     background-position: 50% 50%;
     background-size: 50%;

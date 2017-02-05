@@ -14,12 +14,12 @@ $(window).resize(function() {
 });
 function muteMusic() {
     if (on == 1) {
-        document.getElementById("MusicBoxON").src = "/static/images/VolumeOFF.png"
+        document.getElementById("MusicBoxON").src = "static/images/VolumeOFF.png"
         document.getElementById("MusicPlayer").pause();
         on = 0;
     }
     else {
-        document.getElementById("MusicBoxON").src = "/static/images/VolumeON.png"
+        document.getElementById("MusicBoxON").src = "static/images/VolumeON.png"
         document.getElementById("MusicPlayer").play();
         on = 1;
     }
